@@ -1,0 +1,77 @@
+\documentclass{article}
+\usepackage[landscape, margin = 1cm]{geometry}
+\usepackage{multicol}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts,amsmath,amssymb}
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathmorphing}
+\usepackage{colortbl}
+\usepackage{xcolor}
+\parindent0pt
+\parskip2pt
+
+%----------------------------Colores ------------------------------
+\definecolor{amaranto}{rgb}{0.9, 0.17, 0.31}
+\definecolor{amatista}{rgb}{0.6, 0.4, 0.8}
+\definecolor{cian}{rgb}{0.13, 0.67, 0.8}
+\definecolor{verdoso}{rgb}{0.0, 0.62, 0.38}
+%--------------------------------------------------------------------
+
+\pagenumbering{gobble}
+
+%----------------------------Comandos ------------------------------
+\newcommand{\arriba}[1]{\node[fancytitle] at (box.north east)
+{\hspace{0.1cm} #1 \hspace{1cm}}}
+
+\newcommand{\caja}[2]{\begin{tikzpicture}
+    \node[mybox] (box){
+        \begin{minipage}{0.46\textwidth}
+            #2
+        \end{minipage}
+    };
+    \arriba{#1};
+    \end{tikzpicture}
+    
+    \vspace{0.5cm}}
+
+\newcommand{\setcolor}[1]{\tikzstyle{mybox} = [draw=#1, fill=white, very thick, 
+rectangle, rounded corners, inner sep=10pt, inner ysep=13pt, font= \sffamily]
+\tikzstyle{fancytitle} =[fill=#1, text=white, left, rounded corners,
+font= \sffamily \bfseries]}
+
+\newcommand{\parte}[2]{{\huge \sffamily #1}
+
+    \vspace{0.5cm}
+    {\sffamily \textit{#2}}
+    \vspace{0.2cm}}
+
+\newcommand{\titulo}[1]{{\huge \sffamily #1}
+    \vspace{0.2cm}}
+%------------------------------------------------------------------------
+
+
+\begin{document}
+
+\begin{center}{\textsf{\huge{Formulario de Economía}}}
+\vspace{0.5cm}
+
+\textsf{Realizado por Daniel Jaramillo (2021)\\ En este cheat sheet recupero varias
+ecuaciones de varios libros y autores que son necesarias para estudiar Economía.}
+
+\vspace{0.5cm}
+{\color{amaranto} \hrule}
+\vspace{0.5cm}
+\end{center}
+\begin{multicols*}{2}
+
+
+    \input{partes/basica.tex}
+    \input{partes/collel.tex}
+    \input{partes/computacional.tex}
+
+
+
+\end{multicols*}
+
+\end{document}

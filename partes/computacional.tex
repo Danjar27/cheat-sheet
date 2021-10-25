@@ -1,0 +1,43 @@
+\thispagestyle{empty}
+
+\setcolor{cian}
+
+\parte{\color{cian} Economía Computacional}{Economía computacional es una rama
+de la economía, la cual evalua e investiga métodos computacionales para correr e incluir
+diferentes modelos económicos}
+
+\caja{Jacobiano} {Concepto de cálculo multivariable. Matriz que utilizo para ver
+linealidad local en transformaciones no lineales. Encapsula dentro de sí toda la
+información de las derivadas parciales de cada función con respecto a cada
+variable. Si $T: \mathbb{R}^{n} \rightarrow \mathbb{R}^{n}$ entonces el
+jacobiano obligatoriamente es una matriz cuadrada. 
+\begin{align}
+    \mathbb{J}_{f}(x_{1},x_{2},\cdots x_{n}) = 
+    \left[\begin{array}{c}
+    \nabla^{T} f_{1} \\
+    \vdots \\
+    \nabla^{T} f_{m}
+    \end{array}\right]=\left[\begin{array}{ccc}
+    \dfrac{\partial f_{1}}{\partial x_{1}} & \cdots & \dfrac{\partial f_{1}}{\partial x_{n}} \\
+    \vdots & \ddots & \vdots \\
+    \dfrac{\partial f_{m}}{\partial x_{1}} & \cdots & \dfrac{\partial f_{m}}{\partial x_{n}}
+    \end{array}\right]
+\end{align}}
+
+\caja{Forma Matricial de una ecuación lineal}{Las ecuaciones lineales se puede
+escribir como el producto de una matriz de coeficientes y un vector de
+incógnitas igualado a un vector conocido de constantes:
+\begin{align}
+    A\bar{x} = \bar{B} \qquad
+    \begin{pmatrix}
+    a_{11} & a_{12} \\ a_{21} & a_{22}
+    \end{pmatrix}
+    \cdot
+    \begin{pmatrix}
+    x_{1} \\ x_{2}
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+    b_{1} \\ b_{2}
+    \end{pmatrix}
+\end{align}}

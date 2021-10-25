@@ -1,0 +1,263 @@
+\setcolor{amatista}
+
+\parte{\color{amatista}Teoría microeconómica}{Mas Collel hace un
+análisis más profundo de la teoría económica, repasando los principios de
+microeconomía desde la formalidad matemática}
+
+
+
+\caja{Preferencias} {Sean $x_1,x_2, \dots, x_{n} \in X$, se puede establecer
+    relaciones entre estos elementos, las cuales se conocen como relaciones de
+    preferencia
+    \begin{align}
+        x \succeq x' \qquad  x\succ x' \qquad x \sim x' 
+    \end{align}
+    Al primero se lo lee como, $x$ \textit{se prefiere estrictamente a} $x'$, el
+    segundo, \textit{se prefiere débilmente a} y el tercero, \textit{es
+    indiferente a}. Estas relaciones deben cumplir los principios de continuidad
+    y transitividad, los cuales se definen como
+    \begin{gather}
+        \forall x,y,z \in X : x \succeq y \wedge y \succeq z \therefore x \succeq z \\
+        \forall x,y \in X : x \succeq y \vee y \succeq x
+    \end{gather}
+    siendo el principio de transitividad y de continuidad, respectivamente.
+    Expresado en palabras, el primero me dice que las preferencias son
+    transferibles y el segundo que un individuo siempre tiene preferencias. Esto
+    es racionalidad
+}
+
+\caja{Estructuras de decisión} {Un tipo de estructura algebraica que explica
+relaciones de preferencia por fuera de los principios de completitud y transitividad. 
+La forma en que se define es:
+    \begin{align}
+        (\mathcal{B} , C(\cdot))
+    \end{align}
+donde $\mathcal{B}$ es un conjunto de algunas de las posibles combinaciones de
+los elementos de $X$, de siempre dos o más elementos, que se llaman $B \in X$.
+$C(\cdot)$ se conoce como \textbf{regla de decisión} y se define como $C: B \rightarrow x$
+}
+
+\caja{Teorema débil de la preferecia revelada}{
+    Este es una conclusión que se obtiene a partir de las estructuras de decisión. 
+    La expresión \textit{se revela preferible a} se expresa a través de la notación
+    \begin{align}
+        x \succeq^* y : x,y \in X
+    \end{align}
+    Y se explica a través de la regla de decisión. Sea que $\exists x,y,z \in X:
+    B \in \mathcal{B} = \{(x,y), (x,z), (y,z), (x,y,z)\}$, entonces se dice que un
+    consumo se revela preferible, si:
+    \begin{gather}
+         C(\{x,y\}) = \{x\} \therefore x \succeq^* y
+    \end{gather}
+}
+
+\caja{Espacio de bienes y servicios (commodities)}{Exista un número de bienes y
+    servicios disponibles en una economía, estos se representan a través de un
+    espacio vectorial. Sea L el número de bienes y servicios, entonces, el
+    espacio se escribe (para todo $x_{\ell} \in X$) como:
+    \begin{align}
+        \mathbb{R}^L = \begin{bmatrix}
+            1 \\
+            \vdots \\
+            L 
+          \end{bmatrix}
+        \quad
+        X = \begin{bmatrix}
+        x_{1} \\
+        \vdots \\
+        x_{L} 
+      \end{bmatrix} \in \mathbb{R}^L 
+    \end{align}
+}
+
+\caja{Vector de precios}{El precio medido en términos monetarios para una 
+unidad de un bien $x_{\ell} \in X$ 
+
+    \begin{align}
+        P = \begin{bmatrix}
+        p_{1} \\
+        \vdots \\
+        p_{L} 
+      \end{bmatrix} \in \mathbb{R}^L 
+    \end{align}
+}
+
+\caja{Correspondencia y función de demanda Wallrasiana}{
+
+    sean $p$ un vector de precios dados y $w$ un escalar que representa el nivel de
+    riqueza de un consumidor, la función de demanda wallrasiana se define como
+    $W: p,w \rightarrow \mathbb{R}^{L}_{+}$ para $X \in \mathbb{R}^{L}_{+}$ que
+    es el espacio vectorial de commodities más común:
+    \begin{align}
+        x(p,w) = \begin{bmatrix} p_{1} \\ \vdots \\ p_{L} 
+        \end{bmatrix} \cdot
+        \begin{bmatrix} x_{1} \\ \vdots \\ x_{L} 
+        \end{bmatrix} \leqslant w 
+    \end{align}
+}
+
+\caja{Hiperplano presupuestario}{
+
+    Sea una restricción económica asociada al problema del consumidor, se dice que
+    los elementos que conforman esta restricción son:
+    \begin{align}
+        \{x \in \mathbb{R}^{L}_{+}: p\cdot x = w\} \quad \forall x \in B_{p,w}
+    \end{align}
+    Es decir, son el conjunto de cestas de consumo de un conjunto presupuestario,
+    dado un vector $p$ y un escalar $w$, de manera que se cumpla la relación 
+    $p\cdot x = w$. En caso de que L = 2, el hiperplano se llama recta presupuestaria
+}
+
+\caja{Ortogonalidad de $p$ y el hiperplano presupuestario}{
+    
+    Sea $\langle r_{p,w}\rangle = \{x \in \mathbb{R}^{L}_{+}: p\cdot x = w\}$,
+    partiendo de cualquier punto $\bar{x}$ sobre $\langle r_{p,w} \rangle$ se puede trazar $\vec{p}$ de manera que:
+    \begin{align}
+        \vec{p}  = (\bar{x}_1 + p_1 , \bar{x}_2 + p_2 \dots, \bar{x}_L + p_L)
+    \end{align}
+    El producto punto se define como $|x| \cdot |p| \cdot cos(\alpha)$, donde
+    $\alpha$ representa el ángulo interno entre los vectores. Si se cumple que
+    $p \cdot \bar{x} = w \quad \forall \bar{x} \in \langle r_{p,w}\rangle$,
+    entonces $|\cdot| = w-w=0$, por consiguiente:
+    \begin{align}
+        0 = |x| \cdot |p| \cdot cos(\alpha) \qquad |x|,|p| \neq 0 \therefore cos (\alpha) \overset{!}{=} 0
+    \end{align}
+}
+
+\caja{Convexidad de los conjuntos presupuestarios}{
+    No todos los $X$ son
+    convexos, pero $\mathbb{R}^L_{+}$, uno de los subespacios presupuestarios más
+    importantes, sí lo es. Un conjunto es convexo si y sólo si $\exists x'' \in X$
+    tal que:
+    \begin{align}
+        x'' = \lambda x + (1- \lambda) x' \quad \forall x,x' \in X  \wedge \lambda \in [0,1]
+    \end{align}
+}
+
+\setcolor{verdoso}
+
+
+\caja{Efectos sobre la renta (wealth effects)}{
+    \renewcommand*{\arraystretch}{1.8}
+    Sea $x(p,w)$ una función de demanda wallrasiana, el efecto renta de la demanda pueden escribirse como:
+    \begin{align}
+        D_{w}x(p,w) = \frac{\partial x_{\ell}(p,w)}{\partial w} \quad \forall x_{\ell} \in X
+    \end{align}
+    Expresado de manera matricial, se puede decir que: 
+    \begin{align}
+    D_{w}x(p,w) =  \begin{bmatrix}
+        \frac{\partial x_{1}(p,w)}{\partial w}  \\
+        \vdots \\
+        \frac{\partial x_{L}(p,w)}{\partial w}
+      \end{bmatrix} \in \mathbb{R}^L 
+    \end{align}
+    Con esto como guía, se consiguen los conceptos de:
+    \vspace{0.2cm}
+    
+    \textbf{Función de consumo de Engel:}
+    \begin{align}
+        x(\bar{p}, w) \quad E: \bar{p},w \rightarrow \mathbb{R}^L_+
+    \end{align}
+
+    \textbf{Senda de expansión:} Imagen de la función de Engels
+    \begin{align}
+        E_p = \{x(\bar{p},w): w>0\} \in \mathbb{R}^L_{+}
+    \end{align}
+    
+    \textbf{Bien normal:} Si para una variación positiva de la renta, aumenta
+    también la demanda de un bien $x_{\ell}$, entonces es un bien normal
+    \begin{align}
+        \frac{\partial x_{\ell}(p,w)}{\partial w} \geq  0
+    \end{align}
+
+    \textbf{Bien inferior:} Lo contrario a un bien normal.
+    \begin{align}
+        \frac{\partial x_{\ell}(p,w)}{\partial w} \leq 0
+    \end{align}
+}
+
+
+\caja{Homogeneidad de grado cero}{Se dice
+    que una función es homogenea de grado $n$ si, sea la transformación vectorial: $f: V
+    \rightarrow W$ sobre el cuerpo $F$, se cumple que: 
+    \begin{align}
+        f(\alpha v) = \alpha^n f(v) \quad \forall \alpha \in F - \{0\} \wedge \forall v \in V
+    \end{align}
+
+    La función de demanda wallrasiana es homogénea de grado 0, es decir, que: $W: p,w \rightarrow X$:
+    \begin{align}
+        x(p,w) = x(\alpha p , \alpha w) \quad \forall \alpha \in \mathbb{R} - \{0\}        
+    \end{align}
+}
+
+\caja{Efectos sobre el precio (precio effects)}{
+    \renewcommand*{\arraystretch}{1.5}
+    Sea $x(p,w)$ una función de demanda wallrasiana, el efecto precio, o efecto
+    sustitución, para el precio $p_k$ y para el bien $x_\ell$ es igual a:
+    \begin{align}
+        D_{p}x(p,w) = \frac{\partial x_{\ell}(p,w)}{\partial p_k} \quad \forall x_\ell \in X 
+    \end{align}
+    Expresado de manera matricial, se puede decir que: 
+    \begin{align}
+    D_{p}x(p,w) =   \mathbb{J} _{x(p,w)}(p) = \begin{bmatrix}
+        \nabla^T x_1\\
+        \vdots \\
+        \nabla^T x_2
+    \end{bmatrix} = 
+    \begin{bmatrix}
+        \frac{\partial x_{1}}{\partial p_1} && \cdots &&  \frac{\partial x_{1}}{\partial p_L}\\
+        \vdots && \ddots && \vdots \\
+        \frac{\partial x_{L}}{\partial p_1} && \cdots &&  \frac{\partial x_{L}}{\partial p_L}\\
+      \end{bmatrix}
+    \end{align}
+    Con esto como guía, se consiguen los conceptos de:
+    \vspace{0.2cm}
+    
+    \textbf{Función de oferta:} Sea $L=2$ y se mantenga constante $p_1$ y $w$, 
+     se conoce como función de oferta a la curva dada por la forma:
+    \begin{align}
+        x(\bar{p_1},p_2,\bar{w})
+    \end{align}
+
+    \textbf{Bien giffen:} Si la variación del precio de un bien $x_\ell$ es
+    negativa $\Delta p_k <0$ y su demanda disminuye, entonces es un tipo de 
+    bien giffen 
+    \begin{align}
+        \frac{\partial x_{\ell}(p,w)}{\partial p_\ell} > 0 
+    \end{align}
+    
+    \textbf{Bien ordiario:} Lo contrario a los bienes giffen son los bienes ordinarios
+    \begin{align}
+        \frac{\partial x_{\ell}(p,w)}{\partial p_\ell} < 0 
+    \end{align}
+
+    A grandes niveles de agregación, la mayoría de bienes son ordinarios, pero a
+    niveles de baja agregación, la mayoría de bienes son giffen pasado cierto umbral.
+}
+
+\caja{Ley de wallras}{Se dice
+    Para cualquier nivel de precios mayor a cero y un nivel de riqueza $w$ no degenerado,
+    se debe cumplir que 
+    \begin{align}
+        x \cdot p = w
+    \end{align}
+    Es decir, que el consumidor consume la totalidad de su renta. Esta ley no
+tiene mucho sentido en el corto plazo ni para bienes de baja agregación, pero sí 
+para consumo intertemporal y para el largo plazo}
+
+\caja{Agregación de Cournot}{Partiendo de la ley de Wallras $p\cdot x(p,w) = w$,
+    si se deriva con respecto al precio:
+    \begin{align}
+         \frac{\partial p_{\ell} \cdot x_{\ell}(p,w)-w}{\partial p_{k}} = p_{\ell} \cdot \frac{\partial x_\ell (p,w)}{\partial p_k} +  x_k(p,w)= 0
+    \end{align}
+    Si se conoce que $\varepsilon_z(w)$ es igual a la elasticidad $w$ de $z$ y
+    que esta se define como $(d z / d w) \cdot (w/z)$, entonces se puede rescribir (34) como:
+    \begin{align}
+        \sum_{\ell=1}^{L} s_\ell \cdot \varepsilon_{\ell, k}x(p,w) = - s_k
+    \end{align}
+    donde $s_\ell = p_\ell \cdot (p_k/x_\ell) $ y  $s_k = p_k \cdot (x_k / x_\ell)$
+    Es más sencillo de presentar la agregación de Cournot de manera vectorial:
+    \begin{align}
+        p \cdot D_p x(p,w) + x(p,w)^{T} = 0 
+    \end{align}
+}

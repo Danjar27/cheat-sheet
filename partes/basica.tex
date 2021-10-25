@@ -1,0 +1,53 @@
+\thispagestyle{empty}
+
+\setcolor{amaranto}
+
+\titulo{\color{amaranto}Economía Básica}
+
+\caja{Gradiente} {
+    Conjunto de derivadas parciales de primer orden de una
+    función, igualadas a cero
+    \begin{align}
+    \nabla f (x_{1},x_{2}, \dots x_{n})= \left[ \quad \frac{\partial f(x)}{\partial x_{1}} , 
+    \frac{\partial f(x)}{\partial x_{2}} ,\cdots , \frac{\partial f(x)}{\partial x_{n}} \quad \right] = 0_{n}
+\end{align}}
+
+
+\caja{Lagrangiano}{Es un operador/multiplicador matemático que ayuda a computar
+    y resolver problemas de maximización y optimización con una función de
+    restricción. Sea la función que quiero optimizar $f(x,y)$ y una restricción
+    $g(x,y)$
+        \begin{align}
+            \mathcal{L} = f(x,y) + \lambda g(x,y)
+        \end{align}
+}
+
+\caja{Gradiente del Lagrangiano}{Esta es la forma en que generalmente se
+    resuelven problemas relacionados a restricciones y funciones de utilidad
+\begin{align}
+    \nabla \mathcal{L} = \left[ \quad \frac{\partial \mathcal{L}}{x} , 
+    \frac{\partial \mathcal{L}}{y}, \frac{\partial \mathcal{L}}{\lambda} \quad
+    \right] = 0_{3}
+\end{align}}
+
+\caja{Elasticidad} {Elasticidad para cualquiera dos variables w y z. Se lee como
+elasticidad w de z
+\begin{align}
+    \varepsilon_z(w) = \frac{dz}{dw} \cdot \frac{w}{z}
+\end{align}}
+
+\caja{Utilidad de Bernoulli (Neumann y Morgenstern)} {También llamada Función de
+utilidad esperada
+\begin{align}
+    E(x) = \sum(P_{i}x_{i}) \qquad \qquad E[U(x)] = \sum(P_{i}u(x_{i}))
+\end{align}}
+
+\caja{Coeficiente de Aversión Absoluta y relativa al riesgo}{
+    Medir la concavidad de la curva de las funciones de utilidad de Bernoulli:
+            \begin{align}
+                C_{A}(x,u) =
+                \frac{\mathrm{d}^{2}u}{\mathrm{d}x} \div
+                \frac{\mathrm{d}u}{\mathrm{d}x} = \varepsilon_{u'}(x) \qquad
+                \qquad C_{R}(x,u) = xC_{A}(x,u)
+            \end{align}
+}
